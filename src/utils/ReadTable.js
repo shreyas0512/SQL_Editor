@@ -1,35 +1,40 @@
 import { usePapaParse } from "react-papaparse";
 
-function tableResults(filename) {
+function tableResults(link) {
   const { readRemoteFile } = usePapaParse();
-//how to find time taken to execute this function
+  //how to find time taken to execute this function
 
   return new Promise((resolve, reject) => {
-    let res=[];
-    readRemoteFile("https://react-papaparse.js.org/static/csv/normal.csv", {
-     
-    step: (results) => {
-        console.log("Row:", results.data);
-        res.push(results.data);
-        return res;
-      },
+    let res = [];
+    const time = performance.now();
+    readRemoteFile(
+      link,
+      {
+        step: (results) => {
+          res.push(results.data);
+        },
 
-    complete: () => {
-        console.log("Finished:", res);
-        resolve(res);
-      },
-      worker: true,
-      error: (error) => {
-        console.error("Error parsing CSV:", error);
-        reject(error);
-      },
-    });
+        complete: () => {
+          const time2 = performance.now();
+          console.log("Time taken to parse:", time2 - time);
+          const finalResult={
+            data:res,
+            time:time2-time
+          }
+          resolve(finalResult);
+        },
+        worker: true,
+        error: (error) => {
+          console.error("Error parsing CSV:", error);
+          reject(error);
+        },
+      }
+    );
   });
 }
 
 function tableResults2(filename) {
   //parse local file uploaded by user
-  
 }
 
 export default tableResults;

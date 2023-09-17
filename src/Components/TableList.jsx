@@ -1,29 +1,57 @@
 import React from "react";
 import { useState, useRef } from "react";
+import { CurrTable } from "../Contexts/TableContext";
 
 function TableList() {
-  const [tables, setTables] = useState(["table1", "table2", "table3"]);
+
+  const [tables, setTables] = useState([{
+    link:'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/customers.csv',
+    name:'customers'
+  },
+  {
+    link:'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employees.csv',
+    name:'employees'
+  }
+  ]);
+  const [file, setFile] = useState(null); // [file, setFile
   const hiddenfileInput = useRef(null);
+  const { selectedTable, setSelectedTable } = CurrTable();
   const addTable = async () => {
     hiddenfileInput.current.click();
-    
   };
   const handleChange = async (e) => {
     const fileUploaded = e.target.files[0];
-    setTables([...tables, fileUploaded.name]);
+    setFile(fileUploaded);
+    const tablename = fileUploaded.name.slice(0, -4);
+    const link = URL.createObjectURL(fileUploaded);
+    console.log(link);
+    const newtable={
+      link:link,
+      name:tablename
+    }
+
+    setTables([...tables, newtable]);
   };
 
   return (
-    <div className="h-1/2 flex flex-col">
+    <div className="h-1/2 flex flex-col justify-start mb-2">
       <h1 className="text-center font-semibold text-xl">Tables</h1>
-      <div className="overflow-auto flex flex-col">
+      <div className="overflow-auto flex flex-col ">
         {tables.map((element, index) => {
           return (
             <button
               key={index}
-              className="text-center border-[1px] border-[#c8c6c6] mt-2 px-full py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white"
+              className={`text-center border-[1px] border-[#c8c6c6] mt-2 px-full py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white ${
+                selectedTable === element
+                  ? "bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]"
+                  : null
+              }`}
+              onClick={async () => {
+                setSelectedTable(element);
+                console.log(selectedTable);
+              }}
             >
-              {element}
+              {element.name}
             </button>
           );
         })}
