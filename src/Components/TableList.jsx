@@ -24,7 +24,6 @@ function TableList() {
     setFile(fileUploaded);
     const tablename = fileUploaded.name.slice(0, -4);
     const link = URL.createObjectURL(fileUploaded);
-    console.log(link);
     const newtable={
       link:link,
       name:tablename
@@ -49,7 +48,6 @@ function TableList() {
               }`}
               onClick={async () => {
                 setSelectedTable(element);
-                console.log(selectedTable);
               }}
             >
               {element.name}

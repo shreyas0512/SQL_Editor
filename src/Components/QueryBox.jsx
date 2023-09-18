@@ -9,10 +9,10 @@ SyntaxHighlighter.registerLanguage("sql", sql);
 function QueryBox(props) {
   const [query, setQuery] = useState("");
   const textref = useRef(null);
-  const { selectedTable, selectedQuery, setSelectedQuery,savedQueries,setSavedQueries } = CurrTable();
+  const { selectedTable, selectedQuery, setSelectedQuery,savedQueries,setSavedQueries,savedClicked,setSavedClicked } = CurrTable();
 
   useEffect(() => {
-    if (selectedTable) {
+    if (selectedTable && !savedClicked) {
       setQuery(`SELECT * FROM ${selectedTable.name.toUpperCase()};`);
       setSelectedQuery(`SELECT * FROM ${selectedTable.name.toUpperCase()};`);
     }
@@ -20,12 +20,12 @@ function QueryBox(props) {
   useEffect(() => {
     if (selectedQuery) {
       setQuery(selectedQuery);
+      setSavedClicked(false);
     }
   }, [selectedQuery]);
   const handleRun = async () => {
     if (query.startsWith("SELECT * FROM")) {
       props.runQuery(selectedTable.link);
-      console.log("function ran");
     } else if (
       query === "SELECT CUSTOMERID,CONTACTNAME FROM CUSTOMERS;" &&
       selectedTable.name === "customers"
@@ -87,7 +87,11 @@ function QueryBox(props) {
         </div>
         <div className="space-x-8 mt-2 flex self-end">
           <button className="self-end border-[1.5px] border-[#271BB1] px-8 rounded-md text-[#271BB1] font-bold py-1" onClick={()=>{
-            setSavedQueries([...savedQueries,query]);
+           const newQuery={
+              query:query,
+              table:selectedTable
+            }
+            setSavedQueries([...savedQueries,newQuery]);
           }}>
             Save
           </button>

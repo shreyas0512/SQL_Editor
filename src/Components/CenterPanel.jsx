@@ -4,12 +4,9 @@ import BottomPanel from "./BottomPanel";
 import tableResults from "../utils/ReadTable";
 
 function CenterPanel() {
-  console.log("right panel");
   const [results, setResults] = useState(null);
-  console.log(results + "in right panel");
   const [timeTaken, setTimeTaken] = useState(null);
   const runQuery = async (query) => {
-    console.log(query);
     const res = await tableResults(query);
     setResults(res.data);
     setTimeTaken(res.time);

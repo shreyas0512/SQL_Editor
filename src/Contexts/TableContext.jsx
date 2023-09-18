@@ -4,7 +4,8 @@ const TableContext = createContext();
 export const TableContextProvider = ({ children }) => {
   const [selectedTable, setSelectedTable] = useState("");
   const [selectedQuery, setSelectedQuery] = useState("");
-  const [savedQueries, setSavedQueries] = useState(["test", "test2"]);
+  const [savedQueries, setSavedQueries] = useState([]);
+  const [savedClicked, setSavedClicked] = useState(false);
   return (
     <TableContext.Provider
       value={{
@@ -14,6 +15,8 @@ export const TableContextProvider = ({ children }) => {
         setSelectedQuery,
         savedQueries,
         setSavedQueries,
+        savedClicked,
+        setSavedClicked,
       }}
     >
       {children}

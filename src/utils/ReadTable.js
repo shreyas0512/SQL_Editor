@@ -16,7 +16,6 @@ function tableResults(link) {
 
         complete: () => {
           const time2 = performance.now();
-          console.log("Time taken to parse:", time2 - time);
           const finalResult={
             data:res,
             time:time2-time

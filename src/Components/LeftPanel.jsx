@@ -5,7 +5,6 @@ import { UserRole } from "../Contexts/UserContext";
 
 function LeftPanel() {
   const { role } = UserRole();
-  console.log(role);
   return (
     <div className="h-full w-[20vw]  rounded-tr-md rounded-br-md border-[1.5px] border-[#C7C5C5] shadow-sm flex flex-col">
       <TableList />
