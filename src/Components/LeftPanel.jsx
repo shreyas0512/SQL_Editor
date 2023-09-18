@@ -3,7 +3,7 @@ import TableList from "./TableList";
 import QueryList from "./QueryList";
 import { UserRole } from "../Contexts/UserContext";
 
-function Queries() {
+function LeftPanel() {
   const { role } = UserRole();
   console.log(role);
   return (
@@ -15,4 +15,4 @@ function Queries() {
   );
 }
 
-export default Queries;
+export default LeftPanel;

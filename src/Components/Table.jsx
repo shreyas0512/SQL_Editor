@@ -1,18 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { usePapaParse } from "react-papaparse";
-import tableResults from "../utils/ReadTable";
-function Table(props) {
-  console.log(props.results);
+import React from "react";
+import { useReactTable } from "@tanstack/react-table";
+
+const Table = ({ results }) => {
+  console.log(results);
+
   return (
     //table format
-    props.results && (
-      <table className="table-auto w-full h-full overflow-auto ">
-        {props.results.map((result, index) => {
+    results && (
+      <table className="table-auto w-full h-full overflow-auto mt-2 rounded-md mx-2 text-md border">
+        {results.map((result, rowIndex) => {
           return (
-            <tr key={index}>
-              {result.map((data, index) => {
+            <tr key={rowIndex}>
+              {result.map((data, cellIndex) => {
+                // Apply the "bg-blue-500" class only to cells in the first row
+                const cellClassName =
+                  rowIndex === 0
+                    ? "border border-gray-400 px-4 bg-[#271BB1] text-white"
+                    : "border border-gray-400 px-1 -py-8";
+
                 return (
-                  <td key={index} className="border border-gray-400 px-4 py-2 h-2">
+                  <td key={cellIndex} className={cellClassName}>
                     {data}
                   </td>
                 );
@@ -23,6 +30,6 @@ function Table(props) {
       </table>
     )
   );
-}
+};
 
-export default Table;
+export const MemoizedTable = React.memo(Table);

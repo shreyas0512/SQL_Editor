@@ -1,24 +1,17 @@
-import React, { useState } from "react";
-import QueryBox from "./QueryBox";
-import BottomPanel from "./BottomPanel";
-import tableResults from "../utils/ReadTable";
+import React from 'react'
+import TableList from "./TableList";
+import QueryList from "./QueryList";
+import Columns from "./Columns";
+import SavedQueries from "./SavedQueries";
 
 function RightPanel() {
-  const [results, setResults] = useState(null);
-  const[timeTaken,setTimeTaken]=useState(null);
-  const runQuery = async (query) => {
-    console.log(query);
-    const res = await tableResults(query);
-    setResults(res.data);
-    setTimeTaken(res.time);
-  };
-
-  return (
-    <div className="flex flex-col w-[76.2vw] justify-between">
-      <QueryBox runQuery={runQuery} timeTaken={timeTaken} />
-      <BottomPanel results={results} />
-    </div>
-  );
+    return (
+      <div className="h-full w-[20vw]  rounded-tr-md rounded-br-md border-[1.5px] border-[#C7C5C5] shadow-sm flex flex-col">
+        <Columns/>
+        <div className="h-[2px] rounded-lg mx-3 mb-1 w-fill bg-gray-300"></div>
+        <SavedQueries/>
+      </div>
+    );
 }
 
-export default RightPanel;
+export default RightPanel

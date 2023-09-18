@@ -36,12 +36,13 @@ function TableList() {
   return (
     <div className="h-1/2 flex flex-col justify-start mb-2">
       <h1 className="text-center font-semibold text-xl">Tables</h1>
+      <div className="flex flex-col h-full justify-between" >
       <div className="overflow-auto flex flex-col ">
         {tables.map((element, index) => {
           return (
             <button
               key={index}
-              className={`text-center border-[1px] border-[#c8c6c6] mt-2 px-full py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white ${
+              className={`text-center border-[1px] border-[#c8c6c6] mt-2 px-full py-1 mx-2 rounded-md hover:bg-[#271BB1] transition duration-50 ease-in-out hover:text-white ${
                 selectedTable === element
                   ? "bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]"
                   : null
@@ -58,11 +59,12 @@ function TableList() {
       </div>
 
       <button
-        className="text-[#271BB1] font-bold text-md border-[1.5px] py-1 border-[#271BB1] mx-2 rounded-md mt-1"
+        className="text-[#271BB1] font-bold text-md border-[1.5px] py-1 border-[#271BB1] mx-2 rounded-md mt-1 mb-2 hover:bg-[#271BB1] hover:text-white transition duration-50 ease-in-out"
         onClick={addTable}
       >
         + Add Table
       </button>
+      </div>
       <input
         ref={hiddenfileInput}
         onChange={handleChange}
