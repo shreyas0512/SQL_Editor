@@ -1,5 +1,4 @@
 import React from "react";
-import { useReactTable } from "@tanstack/react-table";
 
 const Table = ({ results }) => {
 
