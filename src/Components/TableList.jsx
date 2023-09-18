@@ -13,7 +13,7 @@ function TableList() {
     name:'employees'
   }
   ]);
-  const [file, setFile] = useState(null); // [file, setFile
+  const [file, setFile] = useState(null); 
   const hiddenfileInput = useRef(null);
   const { selectedTable, setSelectedTable } = CurrTable();
   const addTable = async () => {
@@ -42,7 +42,7 @@ function TableList() {
             <button
               key={index}
               className={`text-center border-[1px] border-[#c8c6c6] mt-2 px-full py-1 mx-2 rounded-md hover:bg-[#271BB1] transition duration-50 ease-in-out hover:text-white ${
-                selectedTable === element
+                selectedTable.name == element.name
                   ? "bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]"
                   : null
               }`}

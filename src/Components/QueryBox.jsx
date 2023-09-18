@@ -62,17 +62,18 @@ function QueryBox(props) {
 
   return (
     <div className="flex flex-col mr-4">
-      <SyntaxHighlighter
+      {/* <SyntaxHighlighter
         language="sql"
         style={docco}
         className="bg-[#F7F7F7] text-lg h-[20vh] w-[56.2vw] overflow-hidden  border-[1.3px] border-[#C7C5C5] px-4 py-2 focus:outline-none resize-none"
       >
         {query}
-      </SyntaxHighlighter>
-      <textarea
+      </SyntaxHighlighter> */}
+  <label htmlFor="query" className="sr-only">Query</label>
+      <textarea id="query"
         ref={textref}
         value={query}
-        className="h-[20vh]  w-[56.2vw] text-lg resize-none bg-transparent p-2 font-mono text-transparent caret-black outline-none absolute"
+        className="h-[20vh]  w-[56.2vw] text-lg resize-none  p-2 font-mono caret-black outline-none border-[1.3px] border-[#C7C5C5] bg-[#f9f8ff]"
         onChange={(e) => {
           setQuery(e.target.value);
         }}
