@@ -1,6 +1,6 @@
 # SQL Editor
 An SQL Editor that easily allows users to select a table, choose corresponding query and view output. The editor is capable of handling large CSV files (tested with 50MB file) and allows the user to upload a CSV file and display it's table as well. This project is built using React, TailwindCSS and few other packages which are mentioned below.
-The data used is the data provided in the task description as well as an additional large CSV file all of which is deployed on a vercel server(as rawgithub URLS have issues with certain ISP's). Deployed Link: https://sql-editor-omega.vercel.app/
+The data used is the data provided in the task description as well as an additional large CSV file all of which is deployed on a vercel server(as rawgithub URLS have issues with certain ISP's). Deployed Link: https://sql-editor-0512.vercel.app/
 
 ## Features
 1. An easy to use UI where the user can firstly, choose the table from given options, and then he can choose suitable query from list of available queries. After this, the user can run the query and the output will be displayed on bottom panel.
