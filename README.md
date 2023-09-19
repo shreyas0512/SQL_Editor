@@ -34,7 +34,7 @@ The website developed scored a perfect score on Lighthouse as displayed below.
 ``` ab.json
    "react": "^18.2.0",
    "react-dom": "^18.2.0",
-   "react-papaparse": "^4.1.0"
+   "react-papaparse": "^4.1.0",
    "postcss": "^8.4.29",
    "tailwindcss": "^3.3.3",
    "vite": "^4.4.5"
