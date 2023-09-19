@@ -13,7 +13,7 @@ function BottomPanel(props) {
         {!props.loading && <div onClick={{
 
         }} className="px-3 mr-6 sm:mt-3 mt-1  sm:mb-3 py-1 sm:text-[15px] text-xs cursor-default text-black ml-4 rounded-md self-end">
-          {props.results && `Time Taken: ${props.timeTaken/1000.0} seconds for ${props.size-2} rows`}
+          {props.results && `Time Taken: ${(props.timeTaken/1000.0).toFixed(3)} seconds for ${props.size-2} rows`}
         </div>}
         {!props.loading ?<div className="overflow-auto">
           {props.results?<MemoizedTable results={props.results} />:
