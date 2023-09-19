@@ -12,8 +12,9 @@ function BottomPanel(props) {
         <button className="bg-[#271BB1] px-3 mr-6 mt-3 py-1 text-lg font-semibold text-white ml-4 rounded-md self-end">
           Export as CSV
         </button>
-        <div className="overflow-auto mb-8">
-          {props.results && <MemoizedTable results={props.results} />}
+        <div className="overflow-auto">
+          {props.results?<MemoizedTable results={props.results} />:
+          <h1 className="text-xl mt-20 text-gray-500 text-center">Click Run to view Output!</h1>}
         </div>
       </div>
     </div>

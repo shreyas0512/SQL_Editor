@@ -148,4 +148,11 @@ const columns1 = [
         primaryKey: false,
     },
     ];
+    const columns3 = [{
+        columnName:"Stock Name",
+        dataType:"VARCHAR",
+        primaryKey:true,
+    },{
+        
+    }]
   export  {columns1,columns2};

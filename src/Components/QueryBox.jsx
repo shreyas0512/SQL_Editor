@@ -9,7 +9,15 @@ SyntaxHighlighter.registerLanguage("sql", sql);
 function QueryBox(props) {
   const [query, setQuery] = useState("");
   const textref = useRef(null);
-  const { selectedTable, selectedQuery, setSelectedQuery,savedQueries,setSavedQueries,savedClicked,setSavedClicked } = CurrTable();
+  const {
+    selectedTable,
+    selectedQuery,
+    setSelectedQuery,
+    savedQueries,
+    setSavedQueries,
+    savedClicked,
+    setSavedClicked,
+  } = CurrTable();
 
   useEffect(() => {
     if (selectedTable && !savedClicked) {
@@ -69,8 +77,11 @@ function QueryBox(props) {
       >
         {query}
       </SyntaxHighlighter> */}
-  <label htmlFor="query" className="sr-only">Query</label>
-      <textarea id="query"
+      <label htmlFor="query" className="sr-only">
+        Query
+      </label>
+      <textarea
+        id="query"
         ref={textref}
         value={query}
         className="h-[20vh]  w-[56.2vw] text-lg resize-none  p-2 font-mono caret-black outline-none border-[1.3px] border-[#C7C5C5] bg-[#f9f8ff]"
@@ -82,18 +93,22 @@ function QueryBox(props) {
         <div className="self-start">
           {props.timeTaken && (
             <h4 className="self-start">
-              Time Taken: {props.timeTaken / 1000.0} seconds
+              Time Taken: {props.timeTaken / 1000.0} seconds for {props.size-2}{" "}
+              rows
             </h4>
           )}
         </div>
         <div className="space-x-8 mt-2 flex self-end">
-          <button className="self-end border-[1.5px] border-[#271BB1] px-8 rounded-md text-[#271BB1] font-bold py-1" onClick={()=>{
-           const newQuery={
-              query:query,
-              table:selectedTable
-            }
-            setSavedQueries([...savedQueries,newQuery]);
-          }}>
+          <button
+            className="self-end border-[1.5px] border-[#271BB1] px-8 rounded-md text-[#271BB1] font-bold py-1"
+            onClick={() => {
+              const newQuery = {
+                query: query,
+                table: selectedTable,
+              };
+              setSavedQueries([...savedQueries, newQuery]);
+            }}
+          >
             Save
           </button>
           <button

@@ -10,19 +10,17 @@ function tableResults(link) {
     readRemoteFile(
       link,
       {
-        step: (results) => {
-          res.push(results.data);
-        },
-
-        complete: () => {
+        complete: (resul) => {
           const time2 = performance.now();
+          res = resul.data;
+          console.log("Time taken to parse:", time2 - time);
           const finalResult={
             data:res,
             time:time2-time
           }
+          console.log("finalResult:",finalResult);
           resolve(finalResult);
         },
-        worker: true,
         error: (error) => {
           console.error("Error parsing CSV:", error);
           reject(error);

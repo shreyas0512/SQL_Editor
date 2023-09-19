@@ -27,7 +27,7 @@ function QueryList() {
     <div className="h-1/2 flex flex-col justify-start w-fill">
       <h1 className="text-center font-semibold text-xl">Available Queries</h1>
       <div className=" flex flex-col overflow-auto w-fill">
-        {queries.map((element, index) => {
+        {queries?queries.map((element, index) => {
           return (
             <button
               key={index}
@@ -40,7 +40,7 @@ function QueryList() {
               {element}
             </button>
           );
-        })}
+        }):<h1 className="px-4 mt-4 text-gray-500">Choose a table to view corresponding queries!</h1>}
       </div>
     </div>
   );

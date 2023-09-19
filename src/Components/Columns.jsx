@@ -12,7 +12,11 @@ function Columns() {
     }else if(selectedTable.name==="employees"){
       setSelectedColumns(columns2);
     }
+    else{
+      setSelectedColumns([]);
+    }
   }, [selectedTable]);
+
 
   
   return (
