@@ -18,7 +18,7 @@ function SavedQueries() {
                 </button>
             )
             
-        } ):<h1 className='px-2 mt-8 text-gray-500'>Choose a query and click save!</h1>}      
+        } ):<h1 className='px-2 mt-8 text-gray-700'>Choose a query and click save!</h1>}      
     </div>
     </div>
   )

@@ -17,7 +17,7 @@ function BottomPanel(props) {
         </button>
         <div className="overflow-auto">
           {props.results?<MemoizedTable results={props.results} />:
-          <h1 className="text-xl mt-20 text-gray-500 text-center">Click Run to view Output!</h1>}
+          <h1 className="text-xl mt-20 text-gray-700 text-center">Click Run to view Output!</h1>}
         </div>
       </div>
     </div>

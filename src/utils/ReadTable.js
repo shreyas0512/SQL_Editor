@@ -7,26 +7,21 @@ function tableResults(link) {
   return new Promise((resolve, reject) => {
     let res = [];
     const time = performance.now();
-    readRemoteFile(
-      link,
-      {
-        complete: (resul) => {
-          const time2 = performance.now();
-          res = resul.data;
-          console.log("Time taken to parse:", time2 - time);
-          const finalResult={
-            data:res,
-            time:time2-time
-          }
-          console.log("finalResult:",finalResult);
-          resolve(finalResult);
-        },
-        error: (error) => {
-          console.error("Error parsing CSV:", error);
-          reject(error);
-        },
-      }
-    );
+    readRemoteFile(link, {
+      complete: (resul) => {
+        const time2 = performance.now();
+        res = resul.data;
+        const finalResult = {
+          data: res,
+          time: time2 - time,
+        };
+        resolve(finalResult);
+      },
+      error: (error) => {
+        console.error("Error parsing CSV:", error);
+        reject(error);
+      },
+    });
   });
 }
 
