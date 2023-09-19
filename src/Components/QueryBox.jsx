@@ -38,36 +38,27 @@ function QueryBox(props) {
       query === "SELECT CUSTOMERID,CONTACTNAME FROM CUSTOMERS;" &&
       selectedTable.name === "customers"
     ) {
-      props.runQuery(
-        "https://raw.githubusercontent.com/shreyas0512/csv_files/main/customers.csv"
-      );
+      props.runQuery("https://csv-files.vercel.app/customers.csv");
     } else if (
       query === "SELECT CUSTOMERID FROM CUSTOMERS;" &&
       selectedTable.name === "customers"
     ) {
-      props.runQuery(
-        "https://raw.githubusercontent.com/shreyas0512/csv_files/main/customers1.csv"
-      );
+      props.runQuery("https://csv-files.vercel.app/customers1.csv");
     } else if (
       query === "SELECT EMPLOYEEID, LASTNAME, FIRSTNAME FROM EMPLOYEES;" &&
       selectedTable.name === "employees"
     ) {
-      props.runQuery(
-        "https://raw.githubusercontent.com/shreyas0512/csv_files/main/employees.csv"
-      );
+      props.runQuery("https://csv-files.vercel.app/employees.csv");
     } else if (
       query === "SELECT EMPLOYEEID FROM EMPLOYEES;" &&
       selectedTable.name === "employees"
     ) {
-      props.runQuery(
-        "https://raw.githubusercontent.com/shreyas0512/csv_files/main/employees1.csv"
-      );
+      props.runQuery("https://csv-files.vercel.app/employees1.csv");
     } else {
       alert("Invalid Query! Please choose from the list of available queries.");
     }
-  };
+  }
   //run the csv function
-  
 
   return (
     <div className="flex flex-col sm:mr-4 sm:mt-0 mt-4 w-full">

@@ -5,14 +5,14 @@ import { CurrTable } from "../Contexts/TableContext";
 function TableList() {
 
   const [tables, setTables] = useState([{
-    link:'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/customers.csv',
+    link:"https://csv-files.vercel.app/customers0.csv",
     name:'customers'
   },
   {
-    link:'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employees.csv',
+    link:"https://csv-files.vercel.app/employees0.csv",
     name:'employees'
   },{
-    link:'https://raw.githubusercontent.com/shreyas0512/csv_files/main/stock_market.csv',
+    link:'https://csv-files.vercel.app/stock_market.csv',
     name:'stock_market'
   }
   ]);

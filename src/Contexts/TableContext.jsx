@@ -3,10 +3,9 @@ import { createContext, useContext, useState } from "react";
 const TableContext = createContext();
 export const TableContextProvider = ({ children }) => {
   const [selectedTable, setSelectedTable] = useState({
-    
-      link:'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/customers.csv',
-      name:'customers'
-    });
+    link: '"https://csv-files.vercel.app/customers0.csv',
+    name: "customers",
+  });
   const [selectedQuery, setSelectedQuery] = useState("");
   const [savedQueries, setSavedQueries] = useState([]);
   const [savedClicked, setSavedClicked] = useState(false);
