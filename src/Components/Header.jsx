@@ -13,7 +13,7 @@ export const Header = () => {
           Select Role:
         </label>
         <select id="role"
-          className=" sm:mr-10  sm:p-2 rounded-md outline-none mr-2 text-sm sm:text-md font-bold"
+          className=" sm:mr-10  sm:p-2 p-1 rounded-md outline-none mr-2 text-sm sm:text-md font-bold"
           value={role}
           onChange={(e) => {
             setRole(e.target.value);

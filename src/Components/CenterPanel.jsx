@@ -15,7 +15,7 @@ function CenterPanel() {
   };
 
   return (
-    <div className="flex flex-col w-[56.2vw]">
+    <div className="flex flex-col sm:w-[56.2vw] w-[91vw] !mr-8">
       <QueryBox runQuery={runQuery} timeTaken={timeTaken} size={size} />
       <BottomPanel results={results} />
     </div>

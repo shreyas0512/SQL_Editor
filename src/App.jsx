@@ -13,7 +13,7 @@ function App() {
       <div className="w-screen h-screen overflow-auto bg-no-repeat  bg-[#edeff1]">
         <Header />
         <TableContextProvider>
-          <div className="flex h-[82vh] mt-4 space-x-8 justify-between">
+          <div className="flex sm:flex-row flex-col items-center h-[82vh] mt-4 space-x-8 justify-between">
             <LeftPanel />
             <CenterPanel />
             <RightPanel />

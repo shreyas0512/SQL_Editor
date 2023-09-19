@@ -4,15 +4,15 @@ import { useState } from "react";
 
 function BottomPanel(props) {
   return (
-    <div className="h-[47vh] mt-10">
-      <button className=" bg-[#271BB1] text-white border-[1.5px] px-8 py-0.5 -mb-0.5 text-lg font-semibold ml-4 rounded-tl-md rounded-tr-md">
+    <div className="h-[47vh] mt-10 sm:w-full w-[91vw]">
+      <button className=" bg-[#271BB1] text-white border-[1.5px] px-8 py-0.5 -mb-0.5 sm:text-lg text-md font-semibold ml-4 rounded-tl-md rounded-tr-md">
         Output
       </button>
       <div className="h-full w-full overflow-auto border-[1.5px] border-[#C7C5C5] mr-4 rounded-md flex flex-col">
         <button onClick={{
           /*Download CSV*/
 
-        }} className="bg-[#271BB1] px-3 mr-6 mt-3 py-1 text-lg font-semibold text-white ml-4 rounded-md self-end">
+        }} className="bg-[#271BB1] px-3 mr-6 mt-3 py-1 sm:text-lg text-sm font-semibold text-white ml-4 rounded-md self-end">
           Export as CSV
         </button>
         <div className="overflow-auto">

@@ -69,14 +69,7 @@ function QueryBox(props) {
   //run the csv function
 
   return (
-    <div className="flex flex-col mr-4">
-      {/* <SyntaxHighlighter
-        language="sql"
-        style={docco}
-        className="bg-[#F7F7F7] text-lg h-[20vh] w-[56.2vw] overflow-hidden  border-[1.3px] border-[#C7C5C5] px-4 py-2 focus:outline-none resize-none"
-      >
-        {query}
-      </SyntaxHighlighter> */}
+    <div className="flex flex-col sm:mr-4 sm:mt-0 mt-4 w-full">
       <label htmlFor="query" className="sr-only">
         Query
       </label>
@@ -84,23 +77,23 @@ function QueryBox(props) {
         id="query"
         ref={textref}
         value={query}
-        className="h-[20vh]  w-[56.2vw] text-lg resize-none  p-2 font-mono caret-black outline-none border-[1.3px] border-[#C7C5C5] bg-[#f9f8ff]"
+        className="h-[20vh]  sm:w-[56.2vw] w-[91vw] mr-8 text-lg resize-none  p-2 font-mono caret-black outline-none border-[1.3px] border-[#C7C5C5] bg-[#f9f8ff]"
         onChange={(e) => {
           setQuery(e.target.value);
         }}
       ></textarea>
-      <div className="flex w-full justify-between">
+      <div className="flex sm:w-full w-[91vw] justify-between">
         <div className="self-start">
           {props.timeTaken && (
-            <h4 className="self-start">
-              Time Taken: {props.timeTaken / 1000.0} seconds for {props.size-2}{" "}
-              rows
+            <h4 className="self-start sm:text-lg text-xs mt-2 ">
+              Time Taken: {props.timeTaken / 1000.0} seconds for{" "}
+              {props.size - 2} rows
             </h4>
           )}
         </div>
-        <div className="space-x-8 mt-2 flex self-end">
+        <div className="mt-2 flex self-end sm:space-x-8 space-x-4">
           <button
-            className="self-end border-[1.5px] border-[#271BB1] px-8 rounded-md text-[#271BB1] font-bold py-1"
+            className="self-end border-[1.5px] border-[#271BB1] sm:px-8 px-4 rounded-md text-[#271BB1] font-bold py-1 sm:text-lg text-xs"
             onClick={() => {
               const newQuery = {
                 query: query,
@@ -112,7 +105,7 @@ function QueryBox(props) {
             Save
           </button>
           <button
-            className="self-end border-[1.5px] bg-[#271BB1] px-8 rounded-md text-white font-bold py-1"
+            className="self-end border-[1.5px] bg-[#271BB1] sm:px-8 px-4 rounded-md text-white font-bold py-1 sm:text-lg text-xs"
             onClick={async () => {
               handleRun();
             }}

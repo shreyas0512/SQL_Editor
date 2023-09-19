@@ -33,8 +33,8 @@ function TableList() {
   };
 
   return (
-    <div className="h-1/2 flex flex-col justify-start mb-2">
-      <h1 className="text-center font-semibold text-xl">Tables</h1>
+    <div className="h-1/2 flex flex-col justify-start sm:mb-2 mb-4 ">
+      <h1 className="text-center font-semibold sm:text-xl text-lg">Tables</h1>
       <div className="flex flex-col h-full justify-between" >
       <div className="overflow-auto flex flex-col ">
         {tables.map((element, index) => {
@@ -66,7 +66,7 @@ function TableList() {
       <input
         ref={hiddenfileInput}
         onChange={handleChange}
-        style={{ display: "none" }}
+        className="hidden"
         type="file"
         accept=".csv"
       />

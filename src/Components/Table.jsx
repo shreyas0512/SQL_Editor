@@ -71,7 +71,7 @@ const Table = ({ results }) => {
                 return (
                   <th
                     key={index}
-                    className="border border-gray-400 px-4 bg-[#271BB1] text-white w-[200px]"
+                    className="border border-gray-400 px-4 bg-[#271BB1] text-white w-[200px] sm:text-lg text-sm"
                   >
                     {heading}
                   </th>
@@ -87,7 +87,7 @@ const Table = ({ results }) => {
                     return (
                       <td
                         key={index}
-                        className="border border-gray-400 px-2 h-[50px] bg-[#edebf9] w-[200px] text-[15px]"
+                        className="border border-gray-400 px-2 h-[50px] bg-[#edebf9] w-[200px] sm:text-[15px] text-xs"
                       >
                         {element}
                       </td>
