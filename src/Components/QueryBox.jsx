@@ -32,9 +32,11 @@ function QueryBox(props) {
     }
   }, [selectedQuery]);
   async function handleRun() {
-    if (query.startsWith("SELECT * FROM")) {
+    if(query===`SELECT * FROM ${selectedTable.name.toUpperCase()};`){
       props.runQuery(selectedTable.link);
-    } else if (
+
+    }
+   else if (
       query === "SELECT CUSTOMERID,CONTACTNAME FROM CUSTOMERS;" &&
       selectedTable.name === "customers"
     ) {
@@ -54,7 +56,8 @@ function QueryBox(props) {
       selectedTable.name === "employees"
     ) {
       props.runQuery("https://csv-files.vercel.app/employees1.csv");
-    } else {
+    }
+      else {
       alert("Invalid Query! Please choose from the list of available queries.");
     }
   }

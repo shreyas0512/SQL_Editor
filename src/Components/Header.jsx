@@ -12,16 +12,16 @@ export const Header = () => {
         <label htmlFor="role" className="sr-only">
           Select Role:
         </label>
-        <select id="role"
+        <select
+          id="role"
           className=" sm:mr-10  sm:p-2 p-1 rounded-md outline-none mr-2 text-sm sm:text-md font-bold"
           value={role}
           onChange={(e) => {
             setRole(e.target.value);
           }}
         >
-          <option value="Hero">Hero</option>
-          <option value="Business Analyst">Business Analyst</option>
-          <option value="Data Scientist">Data Scientist</option>
+          <option value="admin">Admin</option>
+          <option value="analyst">Business Analyst</option>
         </select>
       </div>
     </div>
