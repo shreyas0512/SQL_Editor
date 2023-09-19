@@ -31,7 +31,7 @@ function QueryBox(props) {
       setSavedClicked(false);
     }
   }, [selectedQuery]);
-  const handleRun = async () => {
+  async function handleRun() {
     if (query.startsWith("SELECT * FROM")) {
       props.runQuery(selectedTable.link);
     } else if (
@@ -67,6 +67,7 @@ function QueryBox(props) {
     }
   };
   //run the csv function
+  
 
   return (
     <div className="flex flex-col sm:mr-4 sm:mt-0 mt-4 w-full">
@@ -106,9 +107,7 @@ function QueryBox(props) {
           </button>
           <button
             className="self-end border-[1.5px] bg-[#271BB1] sm:px-8 px-4 rounded-md text-white font-bold py-1 sm:text-lg text-xs"
-            onClick={async () => {
-              handleRun();
-            }}
+            onClick={handleRun}
           >
             Run
           </button>

@@ -25,7 +25,7 @@ function QueryList() {
   }, [selectedTable]);
   return (
     <div className="h-1/2 flex flex-col justify-start sm:w-[20vw]">
-      <h1 className="text-center font-semibold sm:text-xl text-md">Available Queries</h1>
+      <h1 className="text-center font-semibold sm:text-lg text-md">Available Queries</h1>
       <div className=" flex flex-col overflow-auto w-fill">
         {queries?queries.map((element, index) => {
           return (
@@ -35,7 +35,7 @@ function QueryList() {
                 setSelectedQuery(element);
 
               }}
-              className={`text-left pl-2 pr-1 border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white ${selectedQuery === element ? 'bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]':null}`}
+              className={`text-left pl-2 pr-1 text-md border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white ${selectedQuery === element ? 'bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]':null}`}
             >
               {element}
             </button>

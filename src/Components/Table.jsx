@@ -6,7 +6,7 @@ const Table = ({ results }) => {
 
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
-  const data = results.slice(1, results.length);
+  const data = results.slice(1, results.length-1);
 
   useEffect(() => {
     setCurrentPage(1);

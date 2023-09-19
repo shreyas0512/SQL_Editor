@@ -41,7 +41,7 @@ function TableList() {
           return (
             <button
               key={index}
-              className={`text-center border-[1px] border-[#c8c6c6] mt-2 px-full py-1 mx-2 rounded-md hover:bg-[#271BB1] transition duration-50 ease-in-out hover:text-white ${
+              className={`text-center border-[1px] border-[#c8c6c6] mt-2 px-full py-1 mx-2 text-md rounded-md hover:bg-[#271BB1] transition duration-50 ease-in-out hover:text-white ${
                 selectedTable.name == element.name
                   ? "bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]"
                   : null
@@ -57,7 +57,7 @@ function TableList() {
       </div>
 
       <button
-        className="text-[#271BB1] font-bold text-md border-[1.5px] py-1 border-[#271BB1] mx-2 rounded-md mt-1 mb-2 hover:bg-[#271BB1] hover:text-white transition duration-50 ease-in-out"
+        className="text-[#271BB1] font-semibold text-md border-[1.5px] py-0.5 border-[#271BB1] mx-2 rounded-md mt-1 mb-2 hover:bg-[#271BB1] hover:text-white transition duration-50 ease-in-out"
         onClick={addTable}
       >
         + Add Table
