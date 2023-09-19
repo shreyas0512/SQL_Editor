@@ -18,7 +18,7 @@ function SavedQueries() {
                   setSelectedTable(element.table);
                   setSavedClicked(true);
                 }}
-                className="text-left pl-2 pr-1 sm:w-[17vw] border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white text-xs sm:text-sm"
+                className="text-left pl-2 pr-1 sm:w-[17vw] border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-blue hover:text-white text-xs sm:text-sm"
               >
                 {element.query}
               </button>

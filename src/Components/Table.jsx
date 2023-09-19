@@ -27,7 +27,7 @@ const Table = ({ results }) => {
             <button
               onClick={() => paginate(currentPage - 1)}
               className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-                currentPage === 1 ? "bg-white" : "bg-[#271BB1] text-white"
+                currentPage === 1 ? "bg-white" : "bg-blue text-white"
               }`}
             >
               Prev
@@ -36,7 +36,7 @@ const Table = ({ results }) => {
           <button
             onClick={() => paginate(1)}
             className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-              currentPage === 1 ? "bg-white" : "bg-[#271BB1] text-white"
+              currentPage === 1 ? "bg-white" : "bg-blue text-white"
             }`}
           >
             Start
@@ -50,7 +50,7 @@ const Table = ({ results }) => {
               className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
                 currentPage === noofpages
                   ? "bg-white"
-                  : "bg-[#271BB1] text-white"
+                  : "bg-blue text-white"
               }`}
             >
               End
@@ -62,7 +62,7 @@ const Table = ({ results }) => {
               className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
                 currentPage === noofpages
                   ? "bg-white"
-                  : "bg-[#271BB1] text-white"
+                  : "bg-blue text-white"
               }`}
             >
               Next
@@ -76,7 +76,7 @@ const Table = ({ results }) => {
                 return (
                   <th
                     key={index}
-                    className="border border-gray-400 px-4 bg-[#271BB1] text-white w-[200px] sm:text-lg text-sm"
+                    className="border border-gray-400 px-4 bg-blue text-white w-[200px] sm:text-lg text-sm"
                   >
                     {heading}
                   </th>

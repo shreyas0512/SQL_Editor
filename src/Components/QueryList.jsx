@@ -35,7 +35,7 @@ function QueryList() {
                 setSelectedQuery(element);
 
               }}
-              className={`text-left pl-2 pr-1 text-md border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white ${selectedQuery === element ? 'bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]':null}`}
+              className={`text-left pl-2 pr-1 text-md border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-blue hover:text-white ${selectedQuery === element ? 'bg-[#cfcaf1] border-[1px] font-semibold border-[#282364]':null}`}
             >
               {element}
             </button>

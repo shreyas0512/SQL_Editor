@@ -93,7 +93,7 @@ function QueryBox(props) {
         </div>
         <div className="mt-2 flex self-end sm:space-x-8 space-x-4">
           <button
-            className="self-end border-[1px] border-[#271BB1] sm:px-8 px-4 rounded-md text-[#271BB1] font-bold py-1 sm:text-lg text-xs"
+            className="self-end border-[1px] border-blue sm:px-8 px-4 rounded-md text-blue font-bold py-1 sm:text-lg text-xs"
             onClick={() => {
               const newQuery = {
                 query: query,
@@ -105,7 +105,7 @@ function QueryBox(props) {
             Save
           </button>
           <button
-            className="self-end border-[1.5px] bg-[#271BB1] sm:px-8 px-4 rounded-md text-white font-bold py-1 sm:text-lg text-xs"
+            className="self-end border-[1.5px] bg-blue sm:px-8 px-4 rounded-md text-white font-bold py-1 sm:text-lg text-xs"
             onClick={handleRun}
           >
             Run
