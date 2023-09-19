@@ -18,7 +18,6 @@ function tableResults(link) {
         };
         resolve(finalResult);
       },
-      worker: true,
       error: (error) => {
         console.error("Error parsing CSV:", error);
         reject(error);
