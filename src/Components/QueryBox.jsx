@@ -32,7 +32,9 @@ function QueryBox(props) {
     }
   }, [selectedQuery]);
   async function handleRun() {
+
     if(query===`SELECT * FROM ${selectedTable.name.toUpperCase()};`){
+      props.setLoading(true);
       props.runQuery(selectedTable.link);
 
     }
@@ -40,6 +42,7 @@ function QueryBox(props) {
       query === "SELECT CUSTOMERID,CONTACTNAME FROM CUSTOMERS;" &&
       selectedTable.name === "customers"
     ) {
+      props.setLoading(true);
       props.runQuery("https://csv-files.vercel.app/customers.csv");
     } else if (
       query === "SELECT CUSTOMERID FROM CUSTOMERS;" &&
@@ -50,11 +53,13 @@ function QueryBox(props) {
       query === "SELECT EMPLOYEEID, LASTNAME, FIRSTNAME FROM EMPLOYEES;" &&
       selectedTable.name === "employees"
     ) {
+      props.setLoading(true);
       props.runQuery("https://csv-files.vercel.app/employees.csv");
     } else if (
       query === "SELECT EMPLOYEEID FROM EMPLOYEES;" &&
       selectedTable.name === "employees"
     ) {
+      props.setLoading(true);
       props.runQuery("https://csv-files.vercel.app/employees1.csv");
     }
       else {

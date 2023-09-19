@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Table = ({ results }) => {
+  console.log("hi there");
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
