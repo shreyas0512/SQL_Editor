@@ -18,7 +18,7 @@ The website developed scored a perfect score on Lighthouse as displayed below.
 
 ## Optimisations achieved
 1. Pagination of Tables permit the website to display large tables without crashing the browser. This makes the user experience pleasant.
-2. 5. By using remote CSV links, I was able to reduce bundle size and improve website performance.
+2. By using remote CSV links, I was able to reduce bundle size and improve website performance.
 3. Effective usage of Context API, ensuring that only the components requiring the global state is wrapped within the context so as to prevent unnecessary re-renders.
 4. Optimal utilisation of React hooks so as to prevent unnecessary side effects and re-renders. This helps to minimise delays and improve response time.
 5. Usage of Papa Parse to decrease CSV parsing time and usage of in-built workers permitting main UI thread to remain unaffected.
@@ -28,6 +28,14 @@ The website developed scored a perfect score on Lighthouse as displayed below.
 9. Labels for screen readers and meta description added to improve accessibility and SEO respectively.
 
 ## Dependencies
+``` ab.json
+   "react": "^18.2.0",
+   "react-dom": "^18.2.0",
+   "react-papaparse": "^4.1.0"
+   "postcss": "^8.4.29",
+   "tailwindcss": "^3.3.3",
+   "vite": "^4.4.5"
+```
 
 
 
