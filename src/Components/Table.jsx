@@ -21,40 +21,44 @@ const Table = ({ results }) => {
   return (
     currentRows && (
       <div className="flex flex-col">
-        <div className="fixed -mt-9 ml-1 flex">
+        <div className="sm:fixed mt-2  sm:-mt-9 ml-4 flex">
           {currentPage !== 1 && (
             <button
               onClick={() => paginate(currentPage - 1)}
-              className={`mx-1 px-4 py-1 rounded-md ${
+              className={`mx-1 sm:px-4 px-1 sm:py-1 py-0.5 rounded-md ${
                 currentPage === 1 ? "bg-white" : "bg-[#271BB1] text-white"
               }`}
             >
               Prev
             </button>
           )}
-            <button
-              onClick={() => paginate(1)}
-              className={`mx-1 px-4 py-1 rounded-md ${
-                currentPage === 1 ? "bg-white" : "bg-[#271BB1] text-white"
-              }`}
-            >
-             Start
-            </button>
-            <h1 className="h-fill w-fill bg-white px-4 rounded-lg">{currentPage}</h1>
-            {currentPage !== noofpages && 
+          <button
+            onClick={() => paginate(1)}
+            className={`mx-1 sm:px-4 px-1 sm:py-1 py-0.5 rounded-md ${
+              currentPage === 1 ? "bg-white" : "bg-[#271BB1] text-white"
+            }`}
+          >
+            Start
+          </button>
+          <h1 className="h-fill w-fill bg-white px-4 rounded-lg">
+            {currentPage}
+          </h1>
+          {currentPage !== noofpages && (
             <button
               onClick={() => paginate(noofpages)}
-              className={`mx-1 px-4 py-1 rounded-md ${
-                currentPage === noofpages ? "bg-white" : "bg-[#271BB1] text-white"
+              className={`mx-1 sm:px-4 px-1 sm:py-1 py-0.5 rounded-md ${
+                currentPage === noofpages
+                  ? "bg-white"
+                  : "bg-[#271BB1] text-white"
               }`}
             >
               End
             </button>
-            }
+          )}
           {currentPage !== noofpages && (
             <button
               onClick={() => paginate(currentPage + 1)}
-              className={`mx-4 px-4 py-1 rounded-md ${
+              className={` sm:px-4 px-1 sm:py-1 py-0.5 rounded-md ${
                 currentPage === noofpages
                   ? "bg-white"
                   : "bg-[#271BB1] text-white"
