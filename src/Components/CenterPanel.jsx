@@ -17,10 +17,13 @@ function CenterPanel() {
     setTimeTaken(res.time);
   };
 
+  const exportCSV = () => {
+  }
+
   return (
     <div className="flex h-full flex-col sm:w-[50.2vw] w-[91vw] ml-4 !mr-4 justify-between">
-      <QueryBox runQuery={runQuery} timeTaken={timeTaken} size={size} setLoading={setLoading} />
-      <BottomPanel results={results} loading={loading} />
+      <QueryBox runQuery={runQuery} setLoading={setLoading} />
+      <BottomPanel results={results} loading={loading} timeTaken={timeTaken} size={size} />
     </div>
   );
 }

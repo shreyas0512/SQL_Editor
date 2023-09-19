@@ -84,12 +84,6 @@ function QueryBox(props) {
       ></textarea>
       <div className="flex sm:w-full w-[91vw] justify-between">
         <div className="self-start">
-          {props.timeTaken && (
-            <h4 className="self-start sm:text-sm text-xs mt-2 ">
-              Time Taken: {props.timeTaken / 1000.0} seconds for{" "}
-              {props.size - 2} rows
-            </h4>
-          )}
         </div>
         <div className="mt-2 flex self-end sm:space-x-8 space-x-4">
           <button

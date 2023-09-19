@@ -10,10 +10,11 @@ function BottomPanel(props) {
         Output
       </button>
       <div className="h-full w-full overflow-auto border-[1.5px] border-[#C7C5C5] mr-4 rounded-md flex flex-col">
-        <div onClick={{
+        {!props.loading && <div onClick={{
 
-        }} className="h-20 px-3 mr-6 mt-3 py-1 sm:text-lg text-sm font-semibold cursor-default text-transparent bg-transparent ml-4 rounded-md self-end">
-        </div>
+        }} className="px-3 mr-6 mt-3 mb-3 py-1 sm:text-md text-sm cursor-default text-black ml-4 rounded-md self-end">
+          Time Taken: {props.timeTaken/1000.0} seconds for {props.size-2} rows
+        </div>}
         {!props.loading ?<div className="overflow-auto">
           {props.results?<MemoizedTable results={props.results} />:
           <h1 className="text-xl mt-20 text-gray-700 text-center">Click Run to view Output!</h1>}
