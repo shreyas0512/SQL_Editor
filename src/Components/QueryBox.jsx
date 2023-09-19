@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useMemo, useState } from "react";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import sql from "react-syntax-highlighter/dist/esm/languages/hljs/sql";
 import { CurrTable } from "../Contexts/TableContext";
 
 SyntaxHighlighter.registerLanguage("sql", sql);
