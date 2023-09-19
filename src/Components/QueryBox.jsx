@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useMemo, useState } from "react";
 import { CurrTable } from "../Contexts/TableContext";
-
-SyntaxHighlighter.registerLanguage("sql", sql);
 function QueryBox(props) {
   const [query, setQuery] = useState("");
   const textref = useRef(null);
