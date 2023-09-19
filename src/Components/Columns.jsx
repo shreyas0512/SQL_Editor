@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from "react";
 import { CurrTable } from "../Contexts/TableContext";
-import {columns1,columns2} from "../utils/data";
+import {columns1,columns2,columns3} from "../utils/data";
 
 function Columns() {
   
@@ -13,7 +13,7 @@ function Columns() {
       setSelectedColumns(columns2);
     }
     else{
-      setSelectedColumns([]);
+      setSelectedColumns(columns3);
     }
   }, [selectedTable]);
 

@@ -153,6 +153,25 @@ const columns1 = [
         dataType:"VARCHAR",
         primaryKey:true,
     },{
+      columnName:"Country of Listing",
+        dataType:"VARCHAR",
+        primaryKey:false,
         
+    },{
+      columnName:"Ticker",
+      dataType:"VARCHAR",
+      primaryKey:false,
+    },{
+      columnName:"Margin Rate",
+      dataType:"Percentage",
+      primaryKey:false,
+    } ,{
+      columnName:"Go Short",
+      dataType:"VARCHAR",
+      primaryKey:false,
+    },{
+      columnName:"Limited Risk Premium",
+      dataType:"Precentage",
+      primaryKey:false,
     }]
-  export  {columns1,columns2};
+  export  {columns1,columns2,columns3};

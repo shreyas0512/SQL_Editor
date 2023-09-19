@@ -9,7 +9,10 @@ function BottomPanel(props) {
         Output
       </button>
       <div className="h-full w-full overflow-auto border-[1.5px] border-[#C7C5C5] mr-4 rounded-md flex flex-col">
-        <button className="bg-[#271BB1] px-3 mr-6 mt-3 py-1 text-lg font-semibold text-white ml-4 rounded-md self-end">
+        <button onClick={{
+          /*Download CSV*/
+
+        }} className="bg-[#271BB1] px-3 mr-6 mt-3 py-1 text-lg font-semibold text-white ml-4 rounded-md self-end">
           Export as CSV
         </button>
         <div className="overflow-auto">
