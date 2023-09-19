@@ -77,7 +77,7 @@ function QueryBox(props) {
         id="query"
         ref={textref}
         value={query}
-        className="h-[20vh]  sm:w-[56.2vw] w-[91vw] mr-8 text-lg resize-none  p-2 font-mono caret-black outline-none border-[1.3px] border-[#C7C5C5] bg-[#f9f8ff]"
+        className="h-[20vh]  sm:w-[50.2vw] w-[91vw] mr-8 text-lg resize-none  p-2 font-mono caret-black outline-none border-[1px] border-[#C7C5C5] bg-[#f9f8ff]"
         onChange={(e) => {
           setQuery(e.target.value);
         }}
@@ -85,7 +85,7 @@ function QueryBox(props) {
       <div className="flex sm:w-full w-[91vw] justify-between">
         <div className="self-start">
           {props.timeTaken && (
-            <h4 className="self-start sm:text-lg text-xs mt-2 ">
+            <h4 className="self-start sm:text-sm text-xs mt-2 ">
               Time Taken: {props.timeTaken / 1000.0} seconds for{" "}
               {props.size - 2} rows
             </h4>
@@ -93,7 +93,7 @@ function QueryBox(props) {
         </div>
         <div className="mt-2 flex self-end sm:space-x-8 space-x-4">
           <button
-            className="self-end border-[1.5px] border-[#271BB1] sm:px-8 px-4 rounded-md text-[#271BB1] font-bold py-1 sm:text-lg text-xs"
+            className="self-end border-[1px] border-[#271BB1] sm:px-8 px-4 rounded-md text-[#271BB1] font-bold py-1 sm:text-lg text-xs"
             onClick={() => {
               const newQuery = {
                 query: query,

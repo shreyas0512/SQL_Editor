@@ -4,7 +4,7 @@ import { CurrTable } from '../Contexts/TableContext'
 function SavedQueries() {
     const { savedQueries,setSelectedQuery,setSelectedTable,setSavedClicked} = CurrTable();
   return (
-    <div className='flex flex-col h-1/2 w-fill'>
+    <div className='flex flex-col h-1/2 sm:w-[19vw]'>
         <h1 className='text-center font-semibold text-xl'>Saved Queries</h1>
         <div className='overflow-auto mb-1 text-center'>
         {savedQueries.length!=0?savedQueries.map((element,index)=>{
@@ -13,7 +13,7 @@ function SavedQueries() {
                     setSelectedQuery(element.query);
                     setSelectedTable(element.table);
                     setSavedClicked(true);
-                }} className='text-left pl-2 pr-1 w-fill sm:w-[17vw] border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white'>
+                }} className='text-left pl-2 pr-1 w-[16vw] border-[1px] break-words border-[#c8c6c6] mt-2 py-1 mx-2 rounded-md hover:bg-[#271BB1] hover:text-white text-xs sm:text-sm'>
                     {element.query}
                 </button>
             )

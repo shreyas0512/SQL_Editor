@@ -24,8 +24,8 @@ function QueryList() {
     }
   }, [selectedTable]);
   return (
-    <div className="h-1/2 flex flex-col justify-start w-fill">
-      <h1 className="text-center font-semibold sm:text-xl text-lg">Available Queries</h1>
+    <div className="h-1/2 flex flex-col justify-start sm:w-[20vw]">
+      <h1 className="text-center font-semibold sm:text-xl text-md">Available Queries</h1>
       <div className=" flex flex-col overflow-auto w-fill">
         {queries?queries.map((element, index) => {
           return (

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function BottomPanel(props) {
   return (
-    <div className="h-[47vh] mt-10 sm:w-full w-[91vw]">
+    <div className="h-[47vh] mb-8 sm:w-full w-[91vw]">
       <button className=" bg-[#271BB1] text-white border-[1.5px] px-8 py-0.5 -mb-0.5 sm:text-lg text-md font-semibold ml-4 rounded-tl-md rounded-tr-md">
         Output
       </button>
