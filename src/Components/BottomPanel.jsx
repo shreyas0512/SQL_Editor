@@ -12,7 +12,7 @@ function BottomPanel(props) {
       <div className="h-full w-full overflow-auto border-[1.5px] border-[#C7C5C5] mr-4 rounded-md flex flex-col">
         {!props.loading && <div onClick={{
 
-        }} className="px-3 mr-6 sm:mt-3 mt-1  sm:mb-3 py-1 sm:text-md text-xs cursor-default text-black ml-4 rounded-md self-end">
+        }} className="px-3 mr-6 sm:mt-3 mt-1  sm:mb-3 py-1 sm:text-[15px] text-xs cursor-default text-black ml-4 rounded-md self-end">
           {props.results && `Time Taken: ${props.timeTaken/1000.0} seconds for ${props.size-2} rows`}
         </div>}
         {!props.loading ?<div className="overflow-auto">
