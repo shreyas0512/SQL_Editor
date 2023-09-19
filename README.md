@@ -10,11 +10,13 @@ The data used is the data provided in the task description as well as an additio
 5. Papa Parse, a popular npm library which claims to be the fastest CSV parser is used to parse CSV files. It has several options for service workers to offload main thread, as well as to stream data in the case of larger files.
 6. User can select roles, which provides curated data or tables suited for that particular role.
 7. User can add a CSV file from his own files and display it on the browser seamlessly without much delay.
+8. The website is mobile responsive as well.
 
 ## Performance metrics
 The website developed scored a perfect score on Lighthouse as displayed below.
-![Screenshot (1335)](https://github.com/shreyas0512/SQL_Editor/assets/76905421/eaf26938-c579-4b15-ae89-ae62bf495612)
-![image](https://github.com/shreyas0512/SQL_Editor/assets/76905421/46bc1b71-41c8-4bbd-9faa-0aeaebc5714c)
+![image](https://github.com/shreyas0512/SQL_Editor/assets/76905421/0d5fa853-cd7c-4889-8bd5-fe709a4b686d)
+![image](https://github.com/shreyas0512/SQL_Editor/assets/76905421/daea5add-9745-4aa9-8584-65d0b84e9d51)
+
 
 ## Optimisations achieved
 1. Pagination of Tables permit the website to display large tables without crashing the browser. This makes the user experience pleasant.
@@ -26,6 +28,7 @@ The website developed scored a perfect score on Lighthouse as displayed below.
 7. No chunky npm packages used that could increase bundle size.
 8. TailwindCSS keeps bundle size lower compared to larger css libraries, and allows for faster development.
 9. Labels for screen readers and meta description added to improve accessibility and SEO respectively.
+10. Mobile responsive UI.
 
 ## Dependencies
 ``` ab.json
