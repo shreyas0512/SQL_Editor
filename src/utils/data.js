@@ -166,7 +166,7 @@ const columns3 = [
   },
   {
     columnName: "Limited Risk Premium",
-    dataType: "Precentage",
+    dataType: "Percentage",
     primaryKey: false,
   },
 ];
