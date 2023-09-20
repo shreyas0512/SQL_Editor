@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 const Table = ({ results }) => {
-  console.log("hi there");
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
-  const data = results.slice(1, results.length-1);
+  const data = results.slice(1, results.length - 1);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -48,9 +47,7 @@ const Table = ({ results }) => {
             <button
               onClick={() => paginate(noofpages)}
               className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-                currentPage === noofpages
-                  ? "bg-white"
-                  : "bg-blue text-white"
+                currentPage === noofpages ? "bg-white" : "bg-blue text-white"
               }`}
             >
               End
@@ -60,9 +57,7 @@ const Table = ({ results }) => {
             <button
               onClick={() => paginate(currentPage + 1)}
               className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-                currentPage === noofpages
-                  ? "bg-white"
-                  : "bg-blue text-white"
+                currentPage === noofpages ? "bg-white" : "bg-blue text-white"
               }`}
             >
               Next
