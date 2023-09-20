@@ -22,8 +22,8 @@ function CenterPanel() {
 
   return (
     <div className="flex h-full flex-col sm:w-[50.2vw] w-[91vw] ml-4 !mr-4 justify-between">
-      <QueryBox runQuery={runQuery} setLoading={setLoading} />
-      <BottomPanel results={results} loading={loading} timeTaken={timeTaken} size={size} />
+      <QueryBox runQuery={runQuery} loading={loading} setLoading={setLoading}   />
+      <BottomPanel results={results} loading={loading} timeTaken={timeTaken} size={size}  />
     </div>
   );
 }

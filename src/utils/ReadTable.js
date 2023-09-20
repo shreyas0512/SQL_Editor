@@ -8,6 +8,7 @@ function tableResults(link) {
     const time = performance.now();
     readRemoteFile(link, {
       download: true,
+      fastMode: true,
       complete: (resul) => {
         const time2 = performance.now();
         res = resul.data;

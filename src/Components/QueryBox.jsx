@@ -93,7 +93,7 @@ function QueryBox(props) {
           >
             Save
           </button>
-          <button
+          <button disabled={props.loading}
             className="self-end border-[1.5px] bg-blue sm:px-8 px-4 rounded-md text-white font-bold py-1 sm:text-lg text-xs"
             onClick={handleRun}
           >
