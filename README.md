@@ -39,7 +39,8 @@ The website developed scored a perfect score on Lighthouse as displayed below.
    "tailwindcss": "^3.3.3",
    "vite": "^4.4.5"
 ```
-
+## Demo
+https://github.com/shreyas0512/SQL_Editor/assets/76905421/ecdebcc9-25d9-406b-9075-c18f0dfb98a4
 
 
 
