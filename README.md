@@ -18,6 +18,10 @@ The website developed scored a perfect score on Lighthouse as displayed below.
 ![image](https://github.com/shreyas0512/SQL_Editor/assets/76905421/daea5add-9745-4aa9-8584-65d0b84e9d51)
 
 
+
+
+
+
 ## Optimisations achieved
 1. Pagination of Tables permit the website to display large tables without crashing the browser. This makes the user experience pleasant.
 2. By using remote CSV links, I was able to reduce bundle size and improve website performance.
@@ -40,9 +44,11 @@ The website developed scored a perfect score on Lighthouse as displayed below.
    "vite": "^4.4.5"
 ```
 ## Demo
+https://github.com/shreyas0512/SQL_Editor/assets/76905421/b2a309e3-45b1-4bac-91d6-95e73abaae2d
 
 
-https://github.com/shreyas0512/SQL_Editor/assets/76905421/b01bc86a-a2ab-4d89-986b-81cde318d6a0
+
+
 
 
 
