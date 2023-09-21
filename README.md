@@ -1,5 +1,5 @@
 # SQL Editor
-An SQL Editor that easily allows users to select a table, choose corresponding query and view output. The editor is capable of handling large CSV files (tested with large file - stock_market table) and allows the user to upload a CSV file and display it's table as well. This project is built using React, TailwindCSS and few other packages which are mentioned below.
+An SQL Editor that easily allows users to select a table, choose corresponding query and view output. The editor is capable of handling large CSV files (tested with large file - stock_market table: 1 million+ rows) and allows the user to upload a CSV file and display it's table as well. This project is built using React, TailwindCSS and few other packages which are mentioned below.
 The data used is the data provided in the task description as well as an additional large CSV file all of which is deployed on a vercel server(as rawgithub URLS have issues with certain ISP's). Deployed Link: https://sql-editor-0512.vercel.app/
 
 ## Features
