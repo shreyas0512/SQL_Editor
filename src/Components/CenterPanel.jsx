@@ -6,6 +6,7 @@ import { UserRole } from "../Contexts/UserContext";
 
 function CenterPanel() {
   const [results, setResults] = useState(null);
+  const [link, setLink] = useState(null); 
   const [timeTaken, setTimeTaken] = useState(null);
   const [loading, setLoading] = useState(false);
   const [size, setSize] = useState(null);
@@ -26,8 +27,8 @@ function CenterPanel() {
   , [role]);
   return (
     <div className="flex h-full flex-col sm:w-[50.2vw] w-[91vw] ml-4 !mr-4 justify-between">
-      <QueryBox runQuery={runQuery} loading={loading} setLoading={setLoading} timeTaken={timeTaken} size={size}    />
-      <BottomPanel results={results} loading={loading}  />
+      <QueryBox runQuery={runQuery} loading={loading} setLoading={setLoading} timeTaken={timeTaken} size={size} setLink={setLink}   />
+      <BottomPanel results={results} loading={loading} link={link}  />
     </div>
   );
 }

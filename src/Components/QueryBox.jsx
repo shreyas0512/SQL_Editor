@@ -31,6 +31,7 @@ function QueryBox(props) {
     if(query===`SELECT * FROM ${selectedTable.name.toUpperCase()};`){
       props.setLoading(true);
       props.runQuery(selectedTable.link);
+      props.setLink(selectedTable.link);
 
     }
    else if (
@@ -39,23 +40,27 @@ function QueryBox(props) {
     ) {
       props.setLoading(true);
       props.runQuery("https://csv-files.vercel.app/customers.csv");
+      props.setLink("https://csv-files.vercel.app/customers.csv");
     } else if (
       query === "SELECT CUSTOMERID FROM CUSTOMERS;" &&
       selectedTable.name === "customers"
     ) {
       props.runQuery("https://csv-files.vercel.app/customers1.csv");
+      props.setLink("https://csv-files.vercel.app/customers1.csv");
     } else if (
       query === "SELECT EMPLOYEEID, LASTNAME, FIRSTNAME FROM EMPLOYEES;" &&
       selectedTable.name === "employees"
     ) {
       props.setLoading(true);
       props.runQuery("https://csv-files.vercel.app/employees.csv");
+      props.setLink("https://csv-files.vercel.app/employees.csv");
     } else if (
       query === "SELECT EMPLOYEEID FROM EMPLOYEES;" &&
       selectedTable.name === "employees"
     ) {
       props.setLoading(true);
       props.runQuery("https://csv-files.vercel.app/employees1.csv");
+      props.setLink("https://csv-files.vercel.app/employees1.csv");
     }
       else {
       alert("Invalid Query! Please choose from the list of available queries.");

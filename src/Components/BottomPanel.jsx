@@ -74,7 +74,7 @@ function BottomPanel(props) {
             End
           </button>  
         </div>
-      <ExportButton results={props.results} />
+      <ExportButton results={props.results} link={props.link} />
       </div>}
         {!props.loading ?<div className="overflow-auto">
           {props.results?<MemoizedTable currentRows={currentRows} results={props.results} />:
