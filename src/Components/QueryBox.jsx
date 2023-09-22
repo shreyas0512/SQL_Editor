@@ -79,8 +79,10 @@ function QueryBox(props) {
       ></textarea>
       <div className="flex sm:w-full w-[91vw] justify-between">
         <div className="self-start">
+       {!props.loading && props.timeTaken && <h1 className="mt-2 sm:text-[17px] text-xs p-2">Time Taken: {(props.timeTaken/1000.0).toFixed(3)} seconds for {props.size-2} rows</h1>}
         </div>
         <div className="mt-2 flex self-end sm:space-x-8 space-x-4">
+         
           <button
             className="self-end border-[1px] border-blue sm:px-8 px-4 rounded-md text-blue font-bold py-1 sm:text-lg text-xs"
             onClick={() => {

@@ -1,68 +1,11 @@
 import React, { useEffect, useState } from "react";
+import ExportButton from "./ExportButton";
 
-const Table = ({ results }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
 
-  const indexOfLastRow = currentPage * rowsPerPage;
-  const indexOfFirstRow = indexOfLastRow - rowsPerPage;
-  const data = results.slice(1, results.length - 1);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [results]);
-
-  const currentRows = data.slice(indexOfFirstRow, indexOfLastRow);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  const noofpages = Math.ceil(results.length / rowsPerPage);
-
+const Table = ({ results,currentRows }) => {
   return (
     currentRows && (
       <div className="flex flex-col">
-        <div className="sm:fixed mt-2  sm:-mt-9 ml-4 flex">
-          <button
-            disabled={currentPage === 1}
-            onClick={() => paginate(1)}
-            className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-              currentPage === 1 ? "bg-white" : "bg-blue text-white"
-            }`}
-          >
-            Start
-          </button>
-          <button
-            disabled={currentPage === 1}
-            onClick={() => paginate(currentPage - 1)}
-            className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-              currentPage === 1 ? "bg-white" : "bg-blue text-white"
-            }`}
-          >
-            Prev
-          </button>
-
-          <h1 className="h-fill w-fill bg-white px-4 rounded-lg">
-            {currentPage}
-          </h1>
-          <button
-            disabled={currentPage === noofpages}
-            onClick={() => paginate(currentPage + 1)}
-            className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-              currentPage === noofpages ? "bg-white" : "bg-blue text-white"
-            }`}
-          >
-            Next
-          </button>
-          <button
-            disabled={currentPage === noofpages}
-            onClick={() => paginate(noofpages)}
-            className={`mx-1 py-[1px] px-1 text-xs rounded-md ${
-              currentPage === noofpages ? "bg-white" : "bg-blue text-white"
-            }`}
-          >
-            End
-          </button>
-        </div>
         <table className="table-auto w-full h-full overflow-auto mt-2 rounded-md mx-2 text-md border">
           <thead>
             <tr>
