@@ -10,7 +10,8 @@ The data used is the data provided in the task description as well as an additio
 5. Papa Parse, a popular npm library which claims to be the fastest CSV parser is used to parse CSV files. It has several options for service workers to offload main thread, as well as to stream data in the case of larger files.
 6. User can select roles, which provides curated data or tables suited for that particular role.
 7. User can add a CSV file from his own files and display it on the browser seamlessly without much delay.
-8. The website is mobile responsive as well.
+8. User can export resulting csv file.
+9. The website is mobile responsive as well.
 
 ## Performance metrics
 The website developed scored a perfect score on Lighthouse as displayed below.
@@ -44,7 +45,11 @@ The website developed scored a perfect score on Lighthouse as displayed below.
    "vite": "^4.4.5"
 ```
 ## Demo
-https://github.com/shreyas0512/SQL_Editor/assets/76905421/b2a309e3-45b1-4bac-91d6-95e73abaae2d
+
+
+https://github.com/shreyas0512/SQL_Editor/assets/76905421/361b5330-430f-457c-becc-a268928cc267
+
+
 
 
 
